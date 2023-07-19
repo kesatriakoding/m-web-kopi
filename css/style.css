@@ -211,6 +211,40 @@ body {
     mix-blend-mode: difference;
 }
 
+.menu .row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 5rem;
+    justify-content: center;
+}
+
+.menu .row .menu-card {
+    text-align: center;
+    font-size: 1.4;
+}
+
+.menu .row .menu-card img {
+    border-radius: 50%;
+    width: 80%;
+}
+
+.menu .row .menu-card .menu-card-judul {
+    margin: 1rem auto 0.5rem;
+}
+
+.menu .row .menu-card .menu-card-subjudul {}
+
+.menu .row .menu-card .menu-card-keterangan {
+    text-align: center;
+    max-width: 30rem;
+    margin: auto;
+    font-size: 1rem;
+    font-weight: 100;
+    line-height: 1.6;
+    mix-blend-mode: difference;
+    margin-bottom: 5rem;
+}
+
 
 /* Media Queries */
 
