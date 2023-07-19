@@ -20,13 +20,13 @@ body {
     font-family: 'Poppins', sans-serif;
     background-color: var(--bg);
     color: #fff;
-    /* min-height: 200px3; */
+    min-height: 3000px;
 }
 
 
 /* Navbar */
 
-.Navbar {
+.navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -40,18 +40,18 @@ body {
     z-index: 9999;
 }
 
-.Navbar .Navbar-logo {
+.navbar .navbar-logo {
     font-size: 2rem;
     font-weight: 700;
     color: #fff;
     font-style: italic;
 }
 
-.Navbar .Navbar-logo span {
+.navbar .navbar-logo span {
     color: var(--primary);
 }
 
-.Navbar .Navbar-nav a {
+.navbar .navbar-nav a {
     color: #fff;
     display: inline-block;
     font-size: 1.2rem;
@@ -59,11 +59,11 @@ body {
     margin: 0 1rem;
 }
 
-.Navbar .Navbar-nav a:hover {
+.navbar .navbar-nav a:hover {
     color: var(--primary);
 }
 
-.Navbar .Navbar-nav a::after {
+.navbar .navbar-nav a::after {
     content: "";
     display: block;
     padding-bottom: 0.5rem;
@@ -72,46 +72,17 @@ body {
     transition: 0.2s linear;
 }
 
-.Navbar .Navbar-nav a:hover::after {
+.navbar .navbar-nav a:hover::after {
     transform: scaleX(0.5);
 }
 
-.Navbar .Navbar-extra a {
+.navbar .navbar-extra a {
     color: #fff;
     margin: 0 0.5rem;
 }
 
-.Navbar .Navbar-extra a:hover {
+.navbar .navbar-extra a:hover {
     color: var(--primary);
-}
-
-#hamburger-menu {
-    display: inline-block;
-    .Navbar .Navbar-nav {
-        position: absolute;
-        top: 100%;
-        right: -100%;
-        background-color: #fff;
-        width: 30rem;
-        height: 100vh;
-        transition: 0.3s;
-    }
-    .Navbar .Navbar-nav.active {
-        right: 0;
-    }
-    .Navbar .Navbar-nav a {
-        color: var(--bg);
-        display: block;
-        margin: 1.5rem;
-        padding: 0.5rem;
-        font-size: 2rem;
-    }
-    .Navbar.Navbar-nav a::after {
-        transform-origin: 0 0;
-    }
-    .Navbar.Navbar-nav a::after {
-        transform: scaleX (0.2);
-    }
 }
 
 
@@ -174,6 +145,58 @@ body {
 }
 
 
+/* About Section */
+
+.about,
+.menu {
+    padding: 10rem 7% 1.4rem;
+}
+
+.about h2,
+.menu h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 3rem;
+}
+
+.about h2 span,
+.menu h2 span {
+    color: var(--primary);
+}
+
+.about .row {
+    display: flex;
+}
+
+.about .row .about-img {
+    flex: 1 1 45rem;
+}
+
+.about .row .about-img img {
+    width: 100%;
+}
+
+.about .row .content {
+    flex: 1 1 35rem;
+    padding: 0 1rem;
+}
+
+.about .row .content h3 {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+}
+
+.about .row .content p {
+    margin-bottom: 0.8rem;
+    font-size: 1.4rem;
+    font-weight: 100;
+    line-height: 1.6;
+}
+
+
+/* Menu Section */
+
+
 /* Media Queries */
 
 
@@ -194,14 +217,54 @@ body {
     }
 }
 
+#hamburger-menu {
+    display: inline-block;
+    .navbar .navbar-nav {
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        background-color: #fff;
+        width: 30rem;
+        height: 100vh;
+        transition: 0.3s;
+    }
+    .navbar .navbar-nav.active {
+        right: 0;
+    }
+    .navbar .navbar-nav a {
+        color: var(--bg);
+        display: block;
+        margin: 1.5rem;
+        padding: 0.5rem;
+        font-size: 2rem;
+    }
+    .navbar.navbar-nav a::after {
+        transform-origin: 0 0;
+    }
+    .navbar.navbar-nav a::after {
+        transform: scaleX (0.2);
+    }
+    .about .row {
+        flex-wrap: wrap;
+    }
+    .about .row .about-img img {
+        height: 24rem;
+        object-fit: cover;
+        object-position: center;
+    }
+    .about .row .content {
+        padding: 0;
+    }
+    .about .row .content p {
+        font-size: 1.6rem;
+    }
+}
+
 
 /* Mobile Phone */
 
 @media (max-width: 450px) {
     html {
         font-size: 55%;
-    }
-    #hamburger-menu {
-        display: inline-block;
     }
 }
