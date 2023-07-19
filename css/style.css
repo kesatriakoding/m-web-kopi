@@ -131,6 +131,7 @@ body {
     line-height: 1.4rem;
     font-weight: 100;
     text-shadow: 1px 1px 3px rgba(1, 1, 1, 0.5);
+    mix-blend-mode: difference;
 }
 
 .hero .content .cta {
@@ -188,13 +189,27 @@ body {
 
 .about .row .content p {
     margin-bottom: 0.8rem;
-    font-size: 1.4rem;
+    font-size: 1rem;
     font-weight: 100;
     line-height: 1.6;
 }
 
 
 /* Menu Section */
+
+.menu h2 {
+    margin-bottom: 1rem;
+}
+
+.menu p {
+    text-align: center;
+    max-width: 30rem;
+    margin: auto;
+    font-size: 1.4rem;
+    font-weight: 100;
+    line-height: 1.6;
+    mix-blend-mode: difference;
+}
 
 
 /* Media Queries */
